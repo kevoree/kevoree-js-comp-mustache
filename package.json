@@ -1,6 +1,6 @@
 {
   "name": "kevoree-comp-mustache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Kevoree component that takes a JSON input and apply the user-defined mustache template on it and outputs it",
   "main": "./lib/Mustache.js",
   "kevoree": {

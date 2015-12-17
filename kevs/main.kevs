@@ -1,0 +1,23 @@
+add node0, browser : JavascriptNode
+add sync : WSGroup
+// and we add your component to the Browser node so that you can test your UI
+add browser.sender: MsgSender
+add browser.comp : Mustache
+add browser.printer: ConsolePrinter
+add chan0, chan1: LocalChannel
+
+attach node0, browser sync
+
+set sync.master = 'node0'
+
+network node0.ip.lo 127.0.0.1
+
+set browser.logLevel = 'DEBUG'
+set browser.comp.template = '<div>
+  <p>{{foo}}</p>
+</div>'
+
+bind browser.sender.send chan0
+bind browser.comp.in chan0
+bind browser.comp.out chan1
+bind browser.printer.input chan1

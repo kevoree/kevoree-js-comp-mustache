@@ -33,4 +33,5 @@ node_modules
 # Kevoree JS
 kevlib.json
 
-browser/*.js
+browser/kevoree-comp-mustache.js
+browser/kevoree-comp-mustache.min.js
